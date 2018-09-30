@@ -4,30 +4,45 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); }
+  transform: translate(-50%, -50%);
+  font-family: Arial, Verdana;
+  color: #fff; }
   #calculator .screen {
     height: 150px; }
+  #calculator .input-wrap {
+    padding: 30px 20px 0; }
+  #calculator #input,
+  #calculator #result {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: right;
+    white-space: nowrap; }
+  #calculator #input {
+    font-size: 27px;
+    color: #999; }
   #calculator .btn-row {
     display: flex;
     background: #f6827b;
     margin-top: 1px; }
+  #calculator .blank {
+    flex: 1; }
   #calculator .btn {
     flex: 1;
     text-align: center;
     line-height: 60px;
-    font-family: Arial, Verdana;
+    height: 60px;
     font-size: 24px;
-    color: #fff; }
-    #calculator .btn:not(.blank) {
-      cursor: pointer; }
+    cursor: pointer; }
+    #calculator .btn > span {
+      user-select: none; }
     #calculator .btn.function {
       background: #ec485d; }
       #calculator .btn.function:hover {
         background: #e71a34; }
-    #calculator .btn.operation {
+    #calculator .btn.operator {
       background: #f7ba86;
       flex: 0 0 25%; }
-      #calculator .btn.operation:hover {
+      #calculator .btn.operator:hover {
         background: #f49f56; }
     #calculator .btn.num {
       background: #f6827b; }

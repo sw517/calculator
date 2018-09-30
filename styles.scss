@@ -7,7 +7,7 @@
 $base-font-family: Arial, Verdana;
 $calc__background: #2a373c;
 $calc__btn-function--background: #ec485d;
-$calc__btn-operation--background: #f7ba86;
+$calc__btn-operator--background: #f7ba86;
 $calc__btn-num--background: #f6827b;
 
 // Calculator Styles
@@ -20,9 +20,28 @@ $calc__btn-num--background: #f6827b;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-family: $base-font-family;
+	color: #fff;
 
 	.screen {
 		height: 150px;
+	}
+
+	.input-wrap {
+		padding: 30px 20px 0;
+	}
+
+	#input,
+	#result {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		text-align: right;
+		white-space: nowrap;
+	}
+
+	#input {
+		font-size: 27px;
+		color: #999;
 	}
 
 	.btn-row {
@@ -31,16 +50,20 @@ $calc__btn-num--background: #f6827b;
 		margin-top: 1px;
 	}
 
+	.blank {
+		flex: 1;
+	}
+
 	.btn {
 		flex: 1;
 		text-align: center;
 		line-height: 60px;
-		font-family: $base-font-family;
+		height: 60px;
 		font-size: 24px;
-		color: #fff;
+		cursor: pointer;
 
-		&:not(.blank) {
-			cursor: pointer;
+		> span {
+			user-select: none; // prevent text highlighting
 		}
 
 		&.function {
@@ -51,12 +74,12 @@ $calc__btn-num--background: #f6827b;
 			}
 		}
 
-		&.operation {
-			background: $calc__btn-operation--background;
+		&.operator {
+			background: $calc__btn-operator--background;
 			flex: 0 0 25%;
 
 			&:hover {
-				background: darken($calc__btn-operation--background, 10%);
+				background: darken($calc__btn-operator--background, 10%);
 			}
 		}
 
