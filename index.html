@@ -4,12 +4,13 @@
 <meta charset="UTF-8">
 <title>Calculator</title>
 <link rel="stylesheet" type="text/css" href="styles.css">
-<script src="script.js"></script>
+<script src="./lib/script.js"></script>
 </head>
 
 <body>
 <div id="content-wrap">
 	<div class="container">
+		<button><a href="/calculator/calculations.php">See Calculations</a></button>
 		<div id="calculator">
 			<div class="inner">
 				<div class="screen">
@@ -22,33 +23,33 @@
 				</div>
 				<div class="buttons">
 					<div class="btn-row">
-						<div id="cancel" class="btn function"><span>AC</span></div>
-						<div id="save" class="btn function"><span>SAVE</span></div>
-						<div class="btn operator" data="divide"><span>&divide;</span></div>
+						<div id="cancel" class="btn function" data-type="function" data-val="ac"><span>AC</span></div>
+						<div id="save" class="btn function" data-type="function" data-val="save"><span>SAVE</span></div>
+						<div class="btn operator" data-type="operator" data-val="divide"><span>&divide;</span></div>
 					</div>
 					<div class="btn-row">
-						<div class="btn num" data="."><span>.</span></div>
-						<div class="btn num" data="0"><span>0</span></div>
+						<div class="btn num" data-type="num" data-val="."><span>.</span></div>
+						<div class="btn num" data-type="num" data-val="0"><span>0</span></div>
 						<div class="blank"><span></span></div>
-						<div class="btn operator" data="multiply"><span>&times;</span></div>
+						<div class="btn operator" data-type="operator" data-val="multiply"><span>&times;</span></div>
 					</div>
 					<div class="btn-row">
-						<div class="btn num" data="1"><span>1</span></div>
-						<div class="btn num" data="2"><span>2</span></div>
-						<div class="btn num" data="3"><span>3</span></div>
-						<div class="btn operator" data="subtract"><span>-</span></div>
+						<div class="btn num" data-type="num" data-val="1"><span>1</span></div>
+						<div class="btn num" data-type="num" data-val="2"><span>2</span></div>
+						<div class="btn num" data-type="num" data-val="3"><span>3</span></div>
+						<div class="btn operator" data-type="operator" data-val="subtract"><span>-</span></div>
 					</div>
 					<div class="btn-row">
-						<div class="btn num" data="4"><span>4</span></div>
-						<div class="btn num" data="5"><span>5</span></div>
-						<div class="btn num" data="6"><span>6</span></div>
-						<div class="btn operator" data="plus"><span>+</span></div>
+						<div class="btn num" data-type="num" data-val="4"><span>4</span></div>
+						<div class="btn num" data-type="num" data-val="5"><span>5</span></div>
+						<div class="btn num" data-type="num" data-val="6"><span>6</span></div>
+						<div class="btn operator" data-type="operator" data-val="plus"><span>+</span></div>
 					</div>
 					<div class="btn-row">
-						<div class="btn num" data="7"><span>7</span></div>
-						<div class="btn num" data="8"><span>8</span></div>
-						<div class="btn num" data="9"><span>9</span></div>
-						<div class="btn operator" data="equals"><span>=</span></div>
+						<div class="btn num" data-type="num" data-val="7"><span>7</span></div>
+						<div class="btn num" data-type="num" data-val="8"><span>8</span></div>
+						<div class="btn num" data-type="num" data-val="9"><span>9</span></div>
+						<div class="btn operator" data-type="operator"  data-val="equals"><span>=</span></div>
 					</div>
 				</div>
 			</div>

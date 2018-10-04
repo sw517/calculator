@@ -11,12 +11,16 @@
     height: 150px; }
   #calculator .input-wrap {
     padding: 30px 20px 0; }
+  #calculator .result-wrap {
+    padding: 0 20px; }
   #calculator #input,
   #calculator #result {
     overflow: hidden;
     text-overflow: ellipsis;
     text-align: right;
     white-space: nowrap; }
+  #calculator #result {
+    font-size: 60px; }
   #calculator #input {
     font-size: 27px;
     color: #999; }

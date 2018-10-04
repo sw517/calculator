@@ -31,12 +31,20 @@ $calc__btn-num--background: #f6827b;
 		padding: 30px 20px 0;
 	}
 
+	.result-wrap {
+	    padding: 0 20px;
+	}
+
 	#input,
 	#result {
 		overflow: hidden;
 		text-overflow: ellipsis;
 		text-align: right;
 		white-space: nowrap;
+	}
+
+	#result {
+		font-size: 60px;
 	}
 
 	#input {
